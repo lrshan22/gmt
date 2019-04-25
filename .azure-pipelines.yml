@@ -97,6 +97,10 @@ jobs:
   # Setup and compile GMT
   - template: ci/azure-pipelines-windows.yml
 
+  # Set
+  - bash: echo "##vso[task.setvariable variable=HOME]D:/a/1/s/"
+    displayName: Set HOME
+
   - bash: |
       set -x -e
       gmt defaults -Vd
